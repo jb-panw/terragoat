@@ -300,10 +300,13 @@ resource "aws_s3_bucket" "destination" {
   versioning_configuration {
     status = "Enabled"
   }
+  tags = {
+    yor_trace = "6ae172cb-f480-4a1e-81eb-2dbd44125943"
+  }
 }
 
 resource "aws_iam_role" "replication" {
-  name = "aws-iam-role"
+  name               = "aws-iam-role"
   assume_role_policy = <<POLICY
 {
   "Version": "2012-10-17",
@@ -319,14 +322,17 @@ resource "aws_iam_role" "replication" {
   ]
 }
 POLICY
+  tags = {
+    yor_trace = "b44af8a4-4d17-4109-b1cc-72baf4d4e026"
+  }
 }
 
 resource "aws_s3_bucket_replication_configuration" "flowbucket" {
   depends_on = [aws_s3_bucket_versioning.flowbucket]
-  role   = aws_iam_role.flowbucket.arn
-  bucket = aws_s3_bucket.flowbucket.id
+  role       = aws_iam_role.flowbucket.arn
+  bucket     = aws_s3_bucket.flowbucket.id
   rule {
-    id = "foobar"
+    id     = "foobar"
     status = "Enabled"
     destination {
       bucket        = aws_s3_bucket.destination.arn
