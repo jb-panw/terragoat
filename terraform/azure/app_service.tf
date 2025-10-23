@@ -15,6 +15,7 @@ resource azurerm_app_service_plan "example" {
     git_modifiers        = "nimrodkor"
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
+    yor_trace            = "b5f19188-0eb1-4b6c-a5d9-76be30da05dd"
   }
 }
 
@@ -35,6 +36,7 @@ resource azurerm_app_service "app-service1" {
     git_modifiers        = "Adin.Ermie/nimrodkor"
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
+    yor_trace            = "c1b4c405-6e36-488f-a4a8-9138b7c0487c"
   }
 }
 
