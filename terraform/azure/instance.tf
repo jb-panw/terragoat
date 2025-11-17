@@ -37,6 +37,8 @@ resource azurerm_linux_virtual_machine "linux_machine" {
     git_modifiers        = "nimrodkor"
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
+    }, {
+    yor_trace = "53d45e95-6441-4695-b704-4fa58b3888f9"
   })
 }
 
@@ -71,5 +73,7 @@ resource azurerm_windows_virtual_machine "windows_machine" {
     git_modifiers        = "nimrodkor"
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
+    }, {
+    yor_trace = "6ba317c5-edb2-4c2b-9be9-44cbbae0d077"
   })
 }
