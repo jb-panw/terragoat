@@ -60,5 +60,6 @@ resource "azurerm_application_gateway" "network" {
     git_last_modified_by = "nimrodkor@users.noreply.github.com"
     git_modifiers        = "harkiratbhardwaj/nimrodkor"
     git_org              = "bridgecrewio"
+    yor_trace            = "aed9381c-697d-4967-b518-7f20643bb6a8"
   }
 }
